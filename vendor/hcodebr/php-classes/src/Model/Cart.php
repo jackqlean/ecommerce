@@ -139,7 +139,7 @@ class Cart extends Model {
 				':idproduct'=>$product->getidproduct()
 			]);
 
-		} else {
+			} else {
 
 			$sql->query("UPDATE tb_cartsproducts SET dtremoved = NOW() WHERE idcart = :idcart AND idproduct = :idproduct AND dtremoved IS NULL LIMIT 1", [
 				':idcart'=>$this->getidcart(),
@@ -210,7 +210,7 @@ class Cart extends Model {
 				'nCdEmpresa'=>'',
 				'sDsSenha'=>'',
 				'nCdServico'=>'40010',
-				'sCepOrigem'=>'09853120',
+				'sCepOrigem'=>'11900000',
 				'sCepDestino'=>$nrzipcode,
 				'nVlPeso'=>$totals['vlweight'],
 				'nCdFormato'=>'1',
